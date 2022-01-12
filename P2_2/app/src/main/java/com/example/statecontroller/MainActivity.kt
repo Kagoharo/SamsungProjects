@@ -18,50 +18,50 @@ const val NDESTROY = "Activity DESTROYED"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
-        var t = Toast.makeText(this,NCREATE,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.NO_GRAVITY,0,0)
-        t.show()
+        val z = Toast.makeText(this,NCREATE,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.NO_GRAVITY,0,0)
+        z.show()
     }
 
     override fun onStart() {
         super.onStart()
-        var t = Toast.makeText(this, NSTART,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.LEFT,0,0)
-        t.show()
+        val z = Toast.makeText(this, NSTART,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.LEFT,0,0)
+        z.show()
     }
 
     override fun onResume() {
         super.onResume()
-        var t = Toast.makeText(this, NRESUME,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.TOP,0,0)
-        t.show()
+        val z = Toast.makeText(this, NRESUME,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.TOP,0,0)
+        z.show()
     }
 
     override fun onPause() {
         super.onPause()
-        var t = Toast.makeText(this, NPAUSE,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.RIGHT,0,0)
-        t.show()
+        val z = Toast.makeText(this, NPAUSE,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.RIGHT,0,0)
+        z.show()
     }
 
     override fun onStop() {
         super.onStop()
-        var t = Toast.makeText(this, NSTOP,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.CENTER,0,0)
-        t.show()
+        val z = Toast.makeText(this, NSTOP,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.CENTER,0,0)
+        z.show()
     }
 
     override fun onRestart() {
         super.onRestart()
-        var t = Toast.makeText(this, NRESTART,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.FILL_HORIZONTAL,0,0)
-        t.show()
+        val z = Toast.makeText(this, NRESTART,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.FILL_HORIZONTAL,0,0)
+        z.show()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        var t = Toast.makeText(this, NDESTROY,Toast.LENGTH_SHORT)
-        t.setGravity(Gravity.FILL,0,0)
-        t.show()
+        val z = Toast.makeText(this, NDESTROY,Toast.LENGTH_SHORT)
+        z.setGravity(Gravity.FILL,0,0)
+        z.show()
     }
 }
