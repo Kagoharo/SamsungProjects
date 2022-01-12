@@ -20,20 +20,20 @@ class MainActivity : AppCompatActivity() {
         var wrong = false
         val spinner:Spinner = findViewById(R.id.spinner)
         val selectedValue:String = spinner.selectedItem.toString();
-        if(sideA.text.toString() == "" || sideB.text.toString() == "" || sideC.text.toString() == ""){
+        if((sideA.text.toString() == "" || sideB.text.toString() == "" || sideC.text.toString() == "") || (sideA.text.toString().toInt()== 0 || sideB.text.toString().toInt()== 0 || sideC.text.toString().toInt()== 0)){
             text.text = "Ошибка ввода"
             wrong = true;
         }
         else{
             for (char in sideA.text){
-                if ((char !in '0'..'9') && (char =='0')){
+                if (char !in '0'..'9'){
                     text.text = "Ошибка ввода"
                     wrong = true;
                 }
             }
             if (!wrong){
                 for (char in sideB.text){
-                    if((char !in '0'..'9') && (char =='0')) {
+                    if(char !in '0'..'9'){
                         text.text = "Ошибка ввода"
                         wrong = true;
                     }
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (!wrong){
                 for (char in sideC.text){
-                    if((char !in '0'..'9') && (char =='0')) {
+                    if(char !in '0'..'9') {
                         text.text = "Ошибка ввода"
                         wrong = true;
                     }
