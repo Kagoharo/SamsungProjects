@@ -17,38 +17,38 @@ class MainActivity : AppCompatActivity() {
         val sideB:EditText = findViewById(R.id.sideB)
         val sideC:EditText = findViewById(R.id.sideC)
         val text:TextView = findViewById(R.id.solution)
-        var flag = false
+        var wrong = false
         val spinner:Spinner = findViewById(R.id.spinner)
         val selectedValue:String = spinner.selectedItem.toString();
         if(sideA.text.toString() == "" || sideB.text.toString() == "" || sideC.text.toString() == ""){
             text.text = "Ошибка ввода"
-            flag = true;
+            wrong = true;
         }
         else{
             for (char in sideA.text){
                 if ((char !in '0'..'9') && (char =='0')){
                     text.text = "Ошибка ввода"
-                    flag = true;
+                    wrong = true;
                 }
             }
-            if (!flag){
+            if (!wrong){
                 for (char in sideB.text){
                     if((char !in '0'..'9') && (char =='0')) {
                         text.text = "Ошибка ввода"
-                        flag = true;
+                        wrong = true;
                     }
                 }
             }
-            if (!flag){
+            if (!wrong){
                 for (char in sideC.text){
                     if((char !in '0'..'9') && (char =='0')) {
                         text.text = "Ошибка ввода"
-                        flag = true;
+                        wrong = true;
                     }
                 }
             }
         }
-        if (!flag){
+        if (!wrong){
             text.text = when(selectedValue){
                 "Сумма длины ребер" -> "Ответ: ${sideA.text.toString().toInt() * 4+sideB.text.toString().toInt() * 4+sideC.text.toString().toInt() * 4}"
                 "Площадь поверхности" -> "Ответ: ${2*((sideA.text.toString().toInt()*sideB.text.toString().toInt())+(sideB.text.toString().toInt()*sideC.text.toString().toInt())+(sideA.text.toString().toInt()*sideC.text.toString().toInt()))}"
