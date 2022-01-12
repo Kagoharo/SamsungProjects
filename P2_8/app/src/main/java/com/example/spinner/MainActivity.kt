@@ -26,14 +26,14 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             for (char in sideA.text){
-                if(char !in '0'..'9') {
+                if ((char !in '0'..'9') && (char =='0')){
                     text.text = "Ошибка ввода"
                     flag = true;
                 }
             }
             if (!flag){
                 for (char in sideB.text){
-                    if(char !in '0'..'9') {
+                    if((char !in '0'..'9') && (char =='0')) {
                         text.text = "Ошибка ввода"
                         flag = true;
                     }
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (!flag){
                 for (char in sideC.text){
-                    if(char !in '0'..'9') {
+                    if((char !in '0'..'9') && (char =='0')) {
                         text.text = "Ошибка ввода"
                         flag = true;
                     }
